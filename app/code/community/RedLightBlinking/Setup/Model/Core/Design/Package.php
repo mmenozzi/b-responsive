@@ -16,9 +16,9 @@ class RedLightBlinking_Setup_Model_Core_Design_Package extends Mage_Core_Model_D
 	 */
 	public function getFilename($file, array $params)
 	{
-		if (version_compare(Mage::getVersion(), '1.9.0.0', '>=')) {
-                        return parent::getFilename($file, $params);
-                }
+        if (version_compare(Mage::getVersion(), '1.9.0.0', '>=')) {
+            return parent::getFilename($file, $params);
+        }
 		Varien_Profiler::start(__METHOD__);
 		$this->updateParamDefaults($params);
 		$result = $this->_fallback($file, $params, array(
@@ -42,9 +42,9 @@ class RedLightBlinking_Setup_Model_Core_Design_Package extends Mage_Core_Model_D
 	 */
 	public function getSkinUrl($file = null, array $params = array())
 	{
-		if (version_compare(Mage::getVersion(), '1.9.0.0', '>=')) {
-                        return parent::getSkinUrl($file, $params);
-                }
+        if (version_compare(Mage::getVersion(), '1.9.0.0', '>=')) {
+            return parent::getSkinUrl($file, $params);
+        }
 		Varien_Profiler::start(__METHOD__);
 		if (empty($params['_type'])) {
 			$params['_type'] = 'skin';
