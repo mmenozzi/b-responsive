@@ -41,13 +41,13 @@
     </adminhtml>
     <admin>
         <routers>
-            <megamenu>
-                <use>admin</use>
+            <adminhtml>
                 <args>
-                    <frontName>admin_megamenu</frontName>
-                    <module>RedLightBlinking_MegaMenu_Adminhtml</module>
+                    <modules>
+                        <megamenu before="Mage_Adminhtml">RedLightBlinking_MegaMenu_Adminhtml</megamenu>
+                    </modules>
                 </args>
-            </megamenu>
+            </adminhtml>
         </routers>
     </admin>
     <default>
